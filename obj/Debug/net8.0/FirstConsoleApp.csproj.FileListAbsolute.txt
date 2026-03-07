@@ -12,3 +12,4 @@
 /home/akanbi/RiderProjects/FirstConsoleApp/obj/Debug/net8.0/FirstConsoleApp.pdb
 /home/akanbi/RiderProjects/FirstConsoleApp/obj/Debug/net8.0/FirstConsoleApp.genruntimeconfig.cache
 /home/akanbi/RiderProjects/FirstConsoleApp/obj/Debug/net8.0/ref/FirstConsoleApp.dll
+/home/akanbi/RiderProjects/FirstConsoleApp/obj/Debug/net8.0/FirstConsoleApp.sourcelink.json
