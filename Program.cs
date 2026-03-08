@@ -30,16 +30,18 @@ decimal money = 1000746.60836836m;
 
 float temprature = 30.5f;
 
+
+/*
 char firstletter = 'f';
 char secondetter = 'a';
 char thirdletter = 't';
 char fourthletter = 'e';
-long pop = 214748364888888868;
+long pop = 214748364888888868;*/
 
 //Console.WriteLine($"welcome {firstletter}{secondetter}{thirdletter}{fourthletter}");
 
-string score = "F";
- name = "Fatimah";
+/*string score = "F";
+ name = "Fatimah";*/
 
 
 // int , memory = 4byte , whole number , e.g: 10,20,30
@@ -55,12 +57,12 @@ string score = "F";
 
 // we have four operators : +, - , * , / , %
 
- int a = 45;
- int b = 40;
- int addedResult = a + b;
- int subtractionResults = a - b;
+// int a = 45;
+ //int b = 40;
+ //int addedResult = a + b;
+// int subtractionResults = a - b;
  
-double divisionResults = (double)a / b;
+//double divisionResults = (double)a / b;
 
 //Console.WriteLine($"Adding a and b values = {addedResult}"); // string interpolation
 //Console.WriteLine($"Subtraction a and b values = {subtractionResults}"); // string interpolation
@@ -121,17 +123,253 @@ int bc = 5;
 
 int remainder = ab % bc;
 
-Console.WriteLine($"Remainder values = {remainder}");
+//Console.WriteLine($"Remainder values = {remainder}");
 
- 
+int balance = 5000;
+int amounttransfered = 3000;
+
+//int newbalance = balance - amounttransfered; // conventional way 
+balance -= amounttransfered; // prefered way 
+
+//Console.WriteLine($"New balance  = {balance}");
+
+int cd = 2;
+int de = 5;
+
+int jk = cd * de;// conventional way
+ cd *= de;
+//Console.WriteLine($"New balance  = {cd}");
+
+// march 8 2026
+
+//Camparison Operators
+// == , equal to.
+// != , not equal to.
+// > , greater than.
+// < , less than.
+// >= . greater than or qual.
+// <= , less than or equal.
+
+// Examples 
+int a = 5;
+int b = 5;
+
+//Console.WriteLine(a > b); // true 
+//Console.WriteLine(a == b); // false
+//Console.WriteLine(a != b); // true
+
+// we make use of if and if-else statement for conditional operators;
+
+/*
+if (a > b)
+{
+ Console.WriteLine("Fatimah was right about a > b to be true");
+}
+else if (a < b)
+{
+ Console.WriteLine("Muheeb  was right");
+}
+
+else
+{
+ Console.WriteLine("Tutor said what fatimah said was wrong");
+}
+*/
+
+
+// Another example 
+
+/*int score = 100;
+
+if (score >= 70)
+{
+ Console.WriteLine("Grade A");
+}
+else if (score >= 60)
+{
+ Console.WriteLine("Grade B");
+}
+else if (score >= 50)
+{
+ Console.WriteLine("Grade C");
+}
+else 
+{
+ Console.WriteLine("Fail");
+}*/
+
+// Logical operators
+// && , means "AND" , this binds true and true values
+// || , means "OR" , only one has to be true
+// ! , means "Not"
+
+// Examples of Logical and comparison operators
+
+// using && 
+/*int score = 30;
+
+if (score >= 50 && score <= 100)
+{
+ Console.WriteLine("Passed");
+}
+else
+{
+ Console.WriteLine("failed");
+}*/
+
+
+/*bool paidfees = true;
+bool hasIcard = true;
+bool hasdonematric = false;
+
+if (paidfees && hasIcard && hasdonematric)
+{
+ Console.WriteLine("You can enter the exam hall");
+}
+else
+{
+ Console.WriteLine("You cannot enter");
+}*/
 
 
 
+// using ||
+
+/*
+bool isStudent = false;
+bool isSeniorCitizen = false;
+
+if (isStudent || isSeniorCitizen)
+{
+ Console.WriteLine("You are qualified for discount");
+}
+else
+{
+ Console.WriteLine("You are not qualified for discount");
+}
+*/
+
+
+// combining the && and ||
+
+bool paidfees = true;
+bool hasIcard = true;
+bool hasdonematric = false;
+bool hasdoneRegistartion = false;
+bool isCitizen = false;
 
 
 
+// 1
+/*if ((paidfees && hasIcard) || hasdonematric)
+{
+ Console.WriteLine("Student can enter exam hall");
+}
+else
+{
+ Console.WriteLine("Student cannot enter exam hall");
+}*/
+
+//2
+/*if ((hasdoneRegistartion && paidfees) || isCitizen)
+{
+ Console.WriteLine("Access Granted");
+}
+else
+{
+ Console.WriteLine("Access Denied");
+}*/
+
+// 3
+/*
+if (paidfees && (hasdonematric || hasdoneRegistartion))
+{
+ Console.WriteLine("Student is fully verified");
+}
+else
+{
+ Console.WriteLine("Student is not verified");
+}
+*/
+
+//4
+
+/*if ((paidfees && hasIcard) && (hasdonematric || hasdoneRegistartion || isCitizen))
+{
+ Console.WriteLine("Student cleared");
+}
+else
+{
+ Console.WriteLine("Student not cleared");
+}*/
+
+//5 
+
+/*if ((paidfees && hasIcard) && (hasdonematric || hasdoneRegistartion) 
+    || (isCitizen && hasIcard))
+{
+ Console.WriteLine("Student can write the final exam");
+}
+else
+{
+ Console.WriteLine("Student cannot write the final exam");
+}*/
+
+// 6
+
+/*if (hasdonematric || paidfees && hasIcard)
+{
+ Console.WriteLine("Student verified");
+}
+else
+{
+ Console.WriteLine("Student not verified");
+}*/
+
+// 7
+
+/*if (paidfees && hasIcard && hasdonematric && hasdoneRegistartion)
+{
+ Console.WriteLine("Student fully cleared");
+}
+else
+{
+ Console.WriteLine("Student not fully cleared");
+}*/
+
+// 8
+
+/*if (paidfees || hasIcard && hasdonematric || hasdoneRegistartion)
+{
+ Console.WriteLine("Approved");
+}
+else
+{
+ Console.WriteLine("Rejected");
+}*/
+
+// 9
+
+/*if (paidfees && hasIcard || hasdonematric || isCitizen)
+{
+ Console.WriteLine("Student allowed");
+}
+else
+{
+ Console.WriteLine("Student not allowed");
+}*/
+
+// 10
 
 
+if (paidfees || hasIcard && hasdonematric || hasdoneRegistartion && isCitizen  )
+{
+ Console.WriteLine("Allowed");
+}
+else
+{
+ Console.WriteLine("Not Allowed");
+}
 
 
 
