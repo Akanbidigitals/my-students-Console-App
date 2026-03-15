@@ -3,9 +3,9 @@
 
 //Variable Declearation(int , double , string,  bool)
 
-int age = 50;
+//int age = 50;
 
-string name = "Munirudeen";
+//string name = "Munirudeen";
 
 double height = 34.5;
 
@@ -509,7 +509,7 @@ string student1 = "Lekan";
 string student2 = "Mariam";
 string student3 = "Jumah";
 
-string[] students = { "lekan", "mariam", "muheeb", "fatimah", "Pedro", "barakah" }; // Array of students
+//string[] students = { "lekan", "mariam", "muheeb", "fatimah", "Pedro", "barakah" }; // Array of students
 
 //Console.WriteLine($"Fatimah name to be printed\n..Printout result= {students[3]}"); // fatimah
 //Console.WriteLine($"Pedro name to be printed\n..Printout result= {students[4]}"); // pedro
@@ -600,15 +600,146 @@ Console.WriteLine($"Multiplication of all the numbers = {mult}");*/
 
 // Lets Build Multiplication table 
 
+/*
 int multiplicationTable = 6;
 
 for (int i = 1; i <= 12; i++)
 {
  Console.WriteLine($"{multiplicationTable} X {i} = {multiplicationTable * i}");
 }
+*/
 
 // 2 X 1 = 2
 // 2 X 2 = 4
+
+//March 15th 2026
+//Foreach, switch statement and UserInput
+
+//Foreach
+//This is used to iterate through arrays or collections easily without using indexes : Example below
+
+/*
+string[] students = { "lekan", "mariam", "muheeb", "fatimah", "Pedro", "barakah" }; // Array of students
+
+foreach (string student in students)
+{
+ Console.WriteLine(student);
+}
+*/
+
+// Switch Statements 
+
+// This used when ypu want to checj multiple possible values of a variable(we use this instead of using multiple if else);
+
+// Example 
+// Sunday, Monday, Tuesday,Wednesday, Thursday, Friday,Saturday 
+
+/*int day = 7;
+
+
+switch (day)
+{
+ case 1:
+  Console.WriteLine("Sunday");
+  break;
+ case 2:
+  Console.WriteLine("Monday");
+  break;
+ case 3:
+  Console.WriteLine("Tuesday");
+  break;
+ case 4:
+  Console.WriteLine("Wednesday");
+  break;
+ default:
+  Console.WriteLine("Invalid day");
+  break;
+}*/
+
+// User Input
+// We use this to make our code interactive instead of hardcoding it in out code , we give our computer an input to execute;
+
+/*
+Console.WriteLine("Enter your name");
+string name = Console.ReadLine(); // i will input this from my console
+
+Console.WriteLine("Enter your age");
+int age = int.Parse((Console.ReadLine()));
+
+Console.WriteLine($"/////////////////\n Hello, welcome {name}, I am {age} yearsLakan");
+*/
+
+
+
+//Atm Machine project
+int pin = 7071;
+int amount = 5000;
+string Acctname = "Lakan";
+int[] amountwithdraw = {2000,500,1000,5000};
+
+Console.WriteLine("Pls enter your pin");
+int pinentry = int.Parse(Console.ReadLine());
+if (pinentry == pin)
+{
+ Console.WriteLine("Enter your account type\n(1) Press 1 for saving. \n (2) Press 2 for current.");
+ int accttypeEntry = int.Parse(Console.ReadLine());
+ if (accttypeEntry == 1)
+ {
+ Console.WriteLine("////////////////////////// \n(1) Press 1 to withdraw. \n (2) Press 2 to check balance.");
+ int bankoperation = int.Parse(Console.ReadLine());
+ if (bankoperation == 1)
+ {
+ Console.WriteLine("///////////////////////\n select amount to withraw\n(1) 2000. \n (2) 500 \n (3) 1000 \n (4) 5000 \n (5)Enter value you want to with");
+ int amountToWithdraw = int.Parse(Console.ReadLine());
+ // we move to switch case 
+ switch (amountToWithdraw)
+ {
+  case 1:
+   amount -= amountwithdraw[0];
+   Console.WriteLine($"//////Withdraw Alert///\n Hi {Acctname}, you have done atm transaction.\n TrasactionType = Debit.\n Amount-Withdrawn = {amountwithdraw[0]}. \n Balance = {amount}.\n Thank you for banking with us.");
+   break;
+  case 2:
+   amount -=  amountwithdraw[1];
+   Console.WriteLine($"////Withdraw Alert///\n Hi {Acctname}, you have done atm transaction.\n TrasactionType = Debit.\n Amount-Withdrawn = {amountwithdraw[1]}. \n Balance = {amount}.\n Thank you for banking with us.");
+   break;
+  case 3:
+   amount -= amountwithdraw[2];
+   Console.WriteLine($"////Withdraw Alert///\n Hi {Acctname}, you have done atm transaction.\n TrasactionType = Debit.\n Amount-Withdrawn = {amountwithdraw[2]}. \n Balance = {amount}.\n Thank you for banking with us.");
+   break;
+  case 4:
+   amount -=  amountwithdraw[3];
+   Console.WriteLine($"////Withdraw Alert///\n Hi {Acctname}, you have done atm transaction.\n TrasactionType = Debit.\n Amount-Withdrawn = {amountwithdraw[3]}. \n Balance = {amount}.\n Thank you for banking with us.");
+   break;
+  case 5:
+   amount -=  amountToWithdraw;
+   Console.WriteLine($"////Withdraw Alert///\n Hi {Acctname}, you have done atm transaction.\n TrasactionType = Debit.\n Amount-Withdrawn = {amountwithdraw[0]}. \n Balance = {amount}.\n Thank you for banking with us.");
+   break;
+  default:
+   Console.WriteLine("////////\nInvalid opration");
+   break;
+ }
+ }
+// Console.WriteLine($"/////AccountSummary///\n. welcome {Acctname}, Your Account Balance is #{amount}");
+ 
+ }
+ else
+ {
+  Console.WriteLine("//////////////////\nYour account type is invalid");
+ }
+ 
+}
+else
+{
+ Console.WriteLine("/////////Invalid pin, try again");
+}
+
+
+ 
+
+
+
+
+
 
 
 
