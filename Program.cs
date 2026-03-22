@@ -672,7 +672,7 @@ Console.WriteLine($"/////////////////\n Hello, welcome {name}, I am {age} yearsL
 
 
 //Atm Machine project
-int pin = 7071;
+/*int pin = 7071;
 int amount = 5000;
 string Acctname = "Lakan";
 int[] amountwithdraw = {2000,500,1000,5000};
@@ -731,19 +731,209 @@ if (pinentry == pin)
 else
 {
  Console.WriteLine("/////////Invalid pin, try again");
+}*/
+
+
+// March - 22- 2026
+
+//Console.WriteLine("Kindly enter your name");
+//string input = Console.ReadLine();
+
+//int userinput = int.Parse(Console.ReadLine());
+
+//decimal.TryParse();
+//bool.TryParse();
+//double.TryParse();
+
+
+/*if(int.TryParse(input, out _))
+{
+ Console.WriteLine("input is valid integer");
+}
+else
+{
+ Console.WriteLine("input is invalid integer");
+}*/
+
+// List and Dictionary
+
+// List : A list is a collection used to store multiple values of the same type in a single variable 
+// List a like a note pad where mutable(add, delete and update)
+
+//Example 
+
+//List<string> name = new List<string>();// old ways 
+
+/*
+var names = new List<string>(); // new ways 
+
+// Add student to the array 
+
+names.Add("Lakan");
+names.Add("Maryam");
+names.Add("Jumah");
+names.Add("Fatimah");*/
+
+//Console.WriteLine(names[2]);
+
+// To get all the values in the array
+
+/*foreach (var name in names)
+{
+ Console.WriteLine(name[1]);
+}*/
+
+// Remove values , removing "Lakan"
+
+/*names.Remove("Lakan");
+
+foreach (var name in names)
+{
+ Console.WriteLine(name);
+}*/
+
+// Update values 
+
+/*
+names[0] = "Ademola";
+
+foreach (var name in names)
+{
+ Console.WriteLine(name);
+}
+*/
+
+
+
+//Example comparing List with arrays;
+
+/*
+int[] nums = [5, 2, 4, 5, 6];
+
+nums[0] = 1;
+
+foreach (var num in nums)
+{
+ Console.WriteLine(num);
+}
+*/
+
+     // Difference Between Array and List
+// Array we have fixed-size collection , while for list we have dynamic-size for the collection.
+// Array is fixed when created , while List can grow or shrink dynamically.
+// for indexing Array[0], while list is List[0]
+// Array is not  flexible - size cannot change , for List we can add and remove 
+// Array we have length to check the array length, for List we have count, Contains, add , remove etc.
+//for array we use it when numbers of element is fixed and perfomance matter, for list we use this when number of element can change(we can also use inbuilt method)
+
+
+// Small Projects 
+// 0803 , 0703 , 0816 , 0813 , 0906 -- MTN
+// 0802 , 0808 , 0708 , 0812 , 0701 , 0901 -- Airtel
+// 0805 , 0807 , 0811 , 0815 , 0705 ,0905 ,0915. -- Glo
+
+
+// This projects tells user to input there phone number from the first four digit , it brings out the network the user is using;
+
+/*var MTN = new List<string> { "0803", "0703", "0816", "0813", "0906" };
+var Airtel = new List<string> {"0802","0808" ,"0708","0812","0701","0901"};
+var Glo = new List<string> {"0805","0807","0811","0815","0705","0905","0915"};
+
+bool running = true;
+
+while (running)
+{
+ Console.WriteLine("\n --- Network checker Menu----");
+ Console.WriteLine("1. Check Network");
+ Console.WriteLine("2. Exit");
+
+ string choice = Console.ReadLine();
+
+ switch (choice)
+ {
+  case "1" : 
+   Console.WriteLine("Enter phone number"); //  07037147031;
+   string phone = Console.ReadLine();
+   if ((phone.Length < 11) || (phone.Length > 11))
+   {
+    Console.WriteLine("Invalid phone number , number must be at least 11 digit");
+   }
+   
+   string prefix = phone.Substring(0, 4); // subsstring uses index o and we need length to be 4 this will be "0703"
+
+   if (MTN.Contains(prefix))
+   {
+    Console.WriteLine($"The number {phone} belongs to MTN");
+   }else if (Airtel.Contains(prefix))
+   {
+    Console.WriteLine($"The number {phone} belongs to Airtel");
+    
+   }else if (Glo.Contains(prefix))
+   {
+    Console.WriteLine($"The number {phone} belongs to Glo");
+   }
+   else
+   {
+    Console.WriteLine("Network operator not found");
+   }
+
+   break;
+  
+  case "2":
+   running = false;
+   Console.WriteLine("Exiting application ....");
+   break;
+  default:
+   Console.WriteLine("Invalid Choice, try again");
+   break;
+   
+ }
+
+}*/
+
+//  Dictionary 
+
+// A Dictionary stores data in key values and pair format 
+// Keys and Values :
+// Example , Animal is a Value :Cat is key 
+// Colour is a value , blue is a key 
+// Vehicle is a value , car is a key 
+
+//int age = 5;
+
+
+
+//Dictionary<int, string> students = new Dictionary<int  ,string>(); // Old ways 
+
+var students = new Dictionary<int, string>(); // new ways 
+
+// key = student Id
+// value = student name 
+
+// Example to Add
+
+students.Add(1, "Muheeb");
+students.Add(2, "Barakah");
+students.Add(3, "Jumah");
+
+/*
+foreach (var student in students  )
+{
+ Console.WriteLine($"Matric number:{student.Key} student name :{student.Value}");
+}*/
+
+students.Remove(2);
+
+foreach (var student in students  )
+{
+ Console.WriteLine($"Matric number:{student.Key} student name :{student.Value}");
 }
 
-
- 
-
-
-
-
-
-
-
-
-
+// Difference between Dictionary and List
+// Dictionary uses Key(which the unique identifier ), while for List we use Index (0,1,2...)
+// Dictionary does not have or guarantee insertion order , List maintains insertion order
+// Dictionary key is unique(cant use same key for different values), for list we can have multiple duplicates
+// Dictionary uses key to values mapping , while list uses collection of items 
 
 
 
